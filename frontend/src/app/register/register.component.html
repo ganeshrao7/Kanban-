@@ -1,0 +1,106 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Hahmlet&family=Roboto+Condensed:wght@300&display=swap');
+  </style>
+
+
+  <mat-toolbar color="primary" class="header">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <div class="with-icon">
+          
+          <mat-icon class="register-icon">account_box</mat-icon><a style="text-decoration:none;color: white;" href="/register" >Register</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-icon class="login-icon">account_circle</mat-icon><a style="text-decoration:none;color: white;" href="/login" >Login</a>  &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+  </button>
+    <img  src="./assets/logo.jpg" alt="logo" style="width: 50px;height: 50px;padding-right: 10px;">
+    <span>Kanban Board</span>
+  </mat-toolbar>
+
+<div class="page-container">
+  <div class="page-title">
+   
+  </div>
+<div>
+<div class="main">
+<div class="welcome" style="color:rgb(240, 170, 240);font-family: 'Hahmlet', serif;font-size: xx-large;">Welcome to Kanban Board !</div>
+<div class="register">
+      <mat-card style=" background-color: rgba(0, 0, 0, 0.3);">
+          <mat-card-title style="color: white;">Please Register</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="field">
+        
+              <mat-form-field>
+                <input type="text" matInput placeholder="User Name" formControlName="username">
+                
+            
+              </mat-form-field>
+           
+              <div *ngIf="!username?.valid && (username?.dirty ||username?.touched)" style="color: tomato;">
+                <div [hidden]="!username.errors?.['required']" >
+                Username is required
+                </div>
+              </div>
+          </div>
+          <div class="field">
+          <mat-form-field>
+            <input type="text" matInput placeholder="Email Id" formControlName="email">
+          </mat-form-field>
+
+          <div *ngIf="!email?.valid && (email?.dirty ||email?.touched)" style="color: tomato;">
+            <div [hidden]="!email.errors?.['required']" >
+            Email Id is required
+            </div>
+          </div>
+          </div>
+        
+          <div class="field">
+          <mat-form-field>
+            <input type="text" matInput placeholder="Phone Number" formControlName="phoneno">
+          </mat-form-field>
+          <div *ngIf="!phoneno?.valid && (phoneno?.dirty ||phoneno?.touched)" style="color: tomato;">
+            <div [hidden]="!phoneno.errors?.['required']" >
+            Phone Number is required
+            </div>
+          </div>
+          </div>
+
+          <div class="field">
+          <mat-form-field>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+            <div *ngIf="!password?.valid && (password?.dirty ||password?.touched)" style="color: tomato;">
+              <div [hidden]="!password.errors?.['required']" >
+              Password is required
+              </div>
+              <div style="color: tomato;" [hidden]="!password.errors?.required.minLength">
+                *Password must have 8 characters
+              </div>
+            </div>
+            </div>
+
+      <!--   <p *ngIf="error" class="error">
+          {{ error }}
+        </p> -->
+    <div class="buttons">
+        <div class="button">
+          <button type="button" mat-raised-button color="primary" routerLink="">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        
+       
+          <button type="submit" mat-raised-button color="primary"  [disabled]="!registerForm.valid">Register</button>
+        
+      </div>
+  </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+    </div>
+  </div>
+   
+    <mat-toolbar color="primary" class="matfooter">
+      <div class="footer">
+        COPYRIGHT © Kanban Board 2021. ALL RIGHTS RESERVED. &nbsp;&nbsp;&nbsp;&nbsp; <a href="/about-us" style="color:white;text-decoration: none;">About Us</a>&nbsp;&nbsp;<a href="/privacy-policy " style="color:white;text-decoration: none;">Privacy Policy</a>
+      </div>
+    </mat-toolbar>
+  

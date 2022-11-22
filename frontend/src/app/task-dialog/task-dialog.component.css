@@ -1,0 +1,27 @@
+.dialog-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-title {
+    font-size: 150%;
+}
+
+.dialog-content {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    color:white;
+}
+
+.description-area {
+    height: 200px;
+}
+
+.field{
+    width:100%;
+}
+.example-custom-date-class {
+    background: orange;
+    border-radius: 100%;
+  }

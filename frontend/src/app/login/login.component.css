@@ -1,0 +1,117 @@
+  .with-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 1050px;
+  }
+  .login-icon{
+    padding: 60%;
+     }
+  .register-icon{
+        padding: 60%;
+         }
+
+ 
+  .icons{
+      margin-left: 700px;
+     
+  }
+  
+  .aligned-with-icon{
+    display: flex;
+    align-items: center;
+  }
+  
+  .add-task-button
+  {
+  padding-right:20px;
+  float: right;
+  }
+  
+  .go-back-button{
+    padding-left: 20px;
+  }
+  
+  .cards{
+    margin-top:80px;
+    margin-left: 200px;
+    align-self: center;
+  }
+  
+  .body{
+      display:flex;
+  }
+  
+ 
+
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+/*   .error {
+    padding: 16px;
+    width: 300px;
+    color: white;
+    background-color: red;
+  } */
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button-register{
+    display: flex;
+    justify-content: flex-start;
+    display: inline;
+    margin-bottom: 100px;
+  }
+
+  .login{
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+   
+  }
+
+  .welcome{
+    justify-content: center;
+    margin-left: 419px;
+    margin-top: 60px;
+  }
+
+  .buttons{
+    display: inline;
+  }
+  .footer{
+    font-size: small;
+    margin-left: 345px;
+    align-items: center;
+  }
+  .matfooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  .header{
+   
+    position: fixed;
+    z-index:1000 ;
+    top: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  
+  }
+  .main{
+    margin-top: 100px;
+  }

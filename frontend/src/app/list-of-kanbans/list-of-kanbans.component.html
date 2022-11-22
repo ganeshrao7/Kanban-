@@ -1,0 +1,50 @@
+
+    <mat-toolbar color="primary" class="header">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <div class="with-icon">
+            
+            <mat-icon class="email">account_circle</mat-icon>{{email}}&nbsp;&nbsp;
+            
+            <mat-icon class="logout">logout</mat-icon><a style="text-decoration:none;color: white;" (click)="log()" >Logout</a>
+          </div>
+    </button>
+      <img  src="./assets/logo.jpg" alt="logo" style="width: 50px;height: 50px;padding-right: 10px;">
+      <span><a href="/kanban" style="text-decoration: none;color: white;">Kanban Board</a></span>
+    </mat-toolbar>
+ 
+  <div class="page-container">
+    <div class="page-title">
+     
+    </div>
+  <div>
+  
+
+  
+  
+ 
+  <div class="add-task-button">
+    <button mat-fab color="primary" (click)="openDialogForNewKanban()">+</button>
+  </div>
+  
+ 
+  <div class="main">
+
+    <mat-card app-player matRipple class="card" *ngFor="let kanban of kanbanList" routerLink="/kanbans/{{kanban.kanbanId}}">
+      
+      <img mat-card-image src="./assets/kanban.jpg">
+      
+      <mat-card-content>
+        <h5 style="font-size: medium;">{{ kanban.kanbanTitle }}</h5>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+  <mat-toolbar color="primary" class="matfooter">
+    <div class="footer">
+      COPYRIGHT © Kanban Board 2021. ALL RIGHTS RESERVED. &nbsp;&nbsp;&nbsp;&nbsp; <a href="/about-us" style="color:white;text-decoration: none;">About Us</a>&nbsp;&nbsp;<a href="/privacy-policy " style="color:white;text-decoration: none;">Privacy Policy</a>
+    </div>
+  </mat-toolbar>
+  
+  

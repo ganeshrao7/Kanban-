@@ -1,0 +1,11 @@
+@import '~ngx-toastr/toastr';
+html {
+    background-image: url(./assets/violet.jpg.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height:150%;
+    
+   
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
